@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 """
-Author: DiabloHorn http://diablohorn.wordpress.com
-Project: cryptoshot, taking enrypted screenshots
+Decrypter for screenshot files
 """
 from Crypto.Cipher import PKCS1_OAEP
 from Crypto.PublicKey import RSA

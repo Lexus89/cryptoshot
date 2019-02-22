@@ -6,15 +6,15 @@ import os
 import datetime
 
 """
-    DiabloHorn http://diablohorn.wordpress.com
-    Save any uploaded data to a file as binary
+Server component
 """
 
 app = Flask(__name__)
  
 @app.route('/', methods=['POST'])
 def root():
-    save_dir = request.remote_addr    
+    #save_dir = request.remote_addr  
+    save_dir =  "./screenshots" 
     current_timestamp = datetime.datetime.now().strftime("%d%m%y_%H%M%S.%f")    
     if request.method == 'POST':
         if not os.path.exists(save_dir):
@@ -28,4 +28,4 @@ def root():
      
 if __name__ == '__main__':
     #remove debug=True if deployed
-    app.run(host='0.0.0.0', port=8008, debug=True)
+    app.run(host='0.0.0.0', port=8008, debug=False)

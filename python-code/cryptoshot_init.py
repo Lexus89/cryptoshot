@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 """
-Author: DiabloHorn http://diablohorn.wordpress.com
-Project: cryptoshot, taking enrypted screenshots
+Init script to patch the binary
 """
 from Crypto.PublicKey import RSA
 import struct
